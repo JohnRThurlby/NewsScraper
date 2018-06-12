@@ -1,0 +1,355 @@
+
+*{box-sizing: border-box}
+
+body {
+ width: 75%;
+ margin: 0 auto; 
+ display: flex;
+ min-height: 100vh;
+ flex-direction: column;
+ background-image: url(../images/breaking-newss.jpg);
+ background-size: cover;
+ background-position: center;
+ background-color: #231f20;
+ font-family: 'Asap', sans-serif;
+ color: #fff;
+}
+
+/* style the container */ 
+.container {
+  position: relative;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px 0 30px 0;
+} 
+
+/* style inputs and link buttons */
+ input,
+.btn { 
+align-self: center;
+  width: 90%;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  margin: 5px 0;
+  opacity: 0.85;
+  display: inline-block;
+  font-size: 17px;
+  line-height: 20px;
+  text-decoration: none; 
+ } 
+
+input:hover,
+.btn:hover {
+   opacity: 1; 
+ } 
+
+/* style the submit button */
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+} 
+
+input[type=submit]:hover {
+  background-color: #45a049;
+} 
+
+.hide-md-lg {
+  display: none;
+} 
+
+/* The message box is shown when the user clicks on the password field */
+ #message {
+  display:none;
+  background: #f1f1f1;
+  color: #000;
+  position: relative;
+  padding: 20px;
+  margin-top: 10px;
+} 
+
+ #message p {
+  padding: 10px 35px;
+  font-size: 18px;
+}
+
+/* Add a green text color and a checkmark when the requirements are right */
+.valid {
+  color: green;
+} 
+
+.valid:before {
+  position: relative;
+  left: -35px;
+  content: "✔";
+} 
+
+/* Add a red text color and an "x" when the requirements are wrong */
+.invalid {
+  color: red;
+} 
+
+.invalid:before {
+  position: relative;
+  left: -35px;
+  content: "✖";
+}
+
+/* Responsive layout - when the screen is less than 650px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 650px) {
+  .col {
+    width: 100%;
+    margin-top: 0;
+  }
+  
+}
+
+
+
+/* Responsive layout - when the screen is less than 650px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 650px) {
+  .col {
+    width: 100%;
+    margin-top: 0;
+  }
+  /* hide the vertical line */
+  .vl {
+    display: none;
+  }
+  /* show the hidden text on small screens */
+  .hide-md-lg {
+    display: block;
+    text-align: center;
+  }
+}
+
+/* CSS for Toggle Images 
+/* Basic background image styling. */
+
+.background-image {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Styles for the alternating / transition effect. */
+
+.toggle-image {
+   position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+   height: 800px;
+  transition: opacity 1s ease-in-out;
+} 
+
+/* Styles for the specific images. */
+.first-image {
+  background-image: url('../images/CasusArcade.jpeg');	
+  z-index: -3;
+  opacity: 0;
+}
+
+
+
+.second-image {
+  background-image: url('../images/CasusFood.jpeg');
+  z-index: -2;
+  opacity: 0;
+}
+
+.third-image {
+  background-image: url('../images/landingpage.jpg');
+  z-index: -1;
+  opacity: 0;
+}
+
+.first-image.show {
+  opacity: 1;
+}
+
+.second-image.show {
+  opacity: 1;
+}
+
+.third-image.show {
+  opacity: 1;
+}
+
+/*main page-amani*/
+
+html, body {
+  width: 100%!important;
+  height: 100%!important;
+  margin: 0!important;
+  font-family: Helvetica, Arial, sans-serif!important;
+  /* overflow: hidden!important; */
+}
+
+.ghost {
+  position: absolute!important;
+  left: -100%!important;
+}
+
+.framed {
+  position: absolute!important;
+  top: 50%; left: 50%!important;
+  width: 15rem!important;
+  margin-left: -7.5rem!important;
+}
+
+.logo {
+  margin-top: -9em;
+  cursor: default;
+}
+
+.form {
+  margin-top: -4.5em!important;
+  transition: 1s ease-in-out!important;
+}
+
+.input {
+  -moz-box-sizing: border-box !important; 
+       box-sizing: border-box !important;
+  font-size: 1.125rem !important;
+  line-height: 3rem!important;
+  width: 100%; height: 3rem!important;
+  color: #444 !important;
+  background-color: rgba(255,255,255,0.8)!important;
+  border: 0!important;
+  border-top: 1px solid rgba(255,255,255,0.3)!important;
+  padding: 0 1rem!important;
+}
+  .input:focus {
+    outline: none!important;
+  }
+  .input--top {
+    border-radius: 0.5rem 0.5rem 0 0!important;
+    border-top: 0!important;
+  }
+  .input--submit {
+    background-color: rgba(92,168,214,0.9) !important;
+    color: #fff!important;
+    font-weight: bold!important;
+    cursor: pointer!important;
+    border-top: 0!important;
+    border-radius: 0 0 0.5rem 0.5rem!important;
+    margin-bottom: 1rem!important;
+  }
+
+
+.text {
+  color: #fff!important;
+  text-shadow: 0 1px 1px rgba(0,0,0,0.8)!important;
+  text-decoration: none!important;
+}
+  .text--small {
+    opacity: 0.85!important;
+    font-size: 0.75rem!important;
+    cursor: pointer!important;
+  }
+    .text--small:hover {
+      opacity: 1!important;
+    }
+  .text--omega {
+    width: 200%!important;
+    margin: 0 0 1rem -50%!important;
+    font-size: 1.5rem!important;
+    line-height: 1.125!important;
+    font-weight: normal!important;
+  }
+  .text--centered {
+    display: block!important;
+    text-align: center!important;
+  }
+  .text--border-right {
+    border-right: 1px solid rgba(255,255,255,0.5)!important;
+    margin-right: 0.75rem!important;
+    padding-right: 0.75rem!important;
+  }
+
+.legal {
+  position: absolute;
+  bottom: 1.125rem; left: 1.125rem;
+}
+
+.develop {
+  position: absolute;
+  right: 1.125rem; bottom: 1.125rem;
+}
+
+
+
+#toggle--login:checked ~ .form--signup { left:200%; visibility:hidden; }
+#toggle--signup:checked ~ .form--login { left:-100%; visibility:hidden; }
+
+@media (height:300px){.legal,.photo-cred{display:none}}
+
+
+/* Styles for event container */
+
+.eventContainer {
+  width: 100%;
+}
+
+.image {
+  width: 50%;
+  height: auto;
+}
+
+.googleMap {
+  width: 25%;
+  height: auto;
+}
+
+#containerTest {
+  padding-top: 800px;
+}
+
+div {
+  overflow:auto;
+}
+
+.material-tooltip {
+  padding: 10px 8px;
+  font-size: 1rem;
+  z-index: 2000;
+  background-color: transparent;
+  border-radius: 2px;
+  color: #fff;
+  min-height: 36px;
+  line-height: 120%;
+  opacity: 0;
+  position: absolute;
+  text-align: center;
+  max-width: calc(100% - 4px);
+  overflow: hidden;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  visibility: hidden;
+  background-color: #323232;
+  font-family: "Roboto Mono";
+  font-size: 0.8em;
+  font-weight: 700;
+}
+
+.brand-logo {
+  position: relative; 
+  top: -40px;
+}
+.brand-logo>img {
+  width: 150px;
+  height: 150px;
+  }
+
+  .modal { 
+    width: 50% !important ; 
+    left: 10%;
+  } 
+
+::placeholder { 
+    color: black;
+    opacity: 1; 
+}

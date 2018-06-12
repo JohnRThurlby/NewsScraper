@@ -1,0 +1,39 @@
+{{!-- Landing Page --}}
+
+<div class="legal">
+    <a class="text text--small text--border-right" href="javascript:;">Terms</a>
+    <a class="text text--small text--border-right" href="javascript:;">Privacy</a>
+</div>
+
+<div class="develop">
+    <a class="text text--small" href="https://github.com/JohnRThurlby/NewsScraper" target="_blank">Developed by
+        <b>John R. Thurlby</b>
+    </a>
+</div>
+
+<header>
+ <nav>
+    <div class="nav-wrapper  blue lighten-4">
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li class="blue lighten-4"><a href="https://radiant-eyrie-36675.herokuapp.com/">News Headlines</a></li>
+        <li class="blue lighten-4"><a href="/">Home</a></li>
+        <li class="blue lighten-4"><a href="/api/savedArticles">Saved Articles</a></li>
+        <li class="blue lighten-4"><a href="/api/newArticles">New Articles</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<div id = "feed">
+  {{#each articles}}
+        {{> feeds/feeds}}
+  {{/each}}
+</div>
+
+{{!-- Footer Container --}}
+<footer>
+</footer>
+
+
+
+
