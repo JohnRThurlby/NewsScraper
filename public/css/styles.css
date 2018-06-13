@@ -7,12 +7,12 @@ body {
  display: flex;
  min-height: 100vh;
  flex-direction: column;
- background-image: url(../images/breaking-newss.jpg);
+ background-image: url(../images/news.jpg);
  background-size: cover;
  background-position: center;
  background-color: #231f20;
  font-family: 'Asap', sans-serif;
- color: #fff;
+ color: rgb(32, 29, 29);
 }
 
 /* style the container */ 
@@ -23,6 +23,11 @@ body {
   padding: 20px 0 30px 0;
 } 
 
+.article-border {
+  border-style: groove;
+  border-width: 7px;
+  border-color: rgb(95, 95, 233);
+}
 /* style inputs and link buttons */
  input,
 .btn { 
@@ -143,40 +148,6 @@ input[type=submit]:hover {
    height: 800px;
   transition: opacity 1s ease-in-out;
 } 
-
-/* Styles for the specific images. */
-.first-image {
-  background-image: url('../images/CasusArcade.jpeg');	
-  z-index: -3;
-  opacity: 0;
-}
-
-
-
-.second-image {
-  background-image: url('../images/CasusFood.jpeg');
-  z-index: -2;
-  opacity: 0;
-}
-
-.third-image {
-  background-image: url('../images/landingpage.jpg');
-  z-index: -1;
-  opacity: 0;
-}
-
-.first-image.show {
-  opacity: 1;
-}
-
-.second-image.show {
-  opacity: 1;
-}
-
-.third-image.show {
-  opacity: 1;
-}
-
 /*main page-amani*/
 
 html, body {
@@ -240,7 +211,7 @@ html, body {
 
 
 .text {
-  color: #fff!important;
+  color: black!important;
   text-shadow: 0 1px 1px rgba(0,0,0,0.8)!important;
   text-decoration: none!important;
 }
