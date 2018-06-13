@@ -20,13 +20,17 @@ var objectEv = {
 
 var SavedArticle = require('../models/savedArticles.js');
 
-mongoose.connect('mongodb://localhost/mongoose_news', function (err) {
- 
-   if (err) throw err;
- 
-   console.log('Successfully connected');
- 
-});
+
+// If deployed, use the deployed database. Otherwise use the local mongoose_news database
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoose_news";
+
+mongoose.Promise = Promise;
+mongoose.connect(MONGODB_URI);
+
+//mongoose.connect('mongodb://localhost/mongoose_news', function (err) {
+//   if (err) throw err;
+//   console.log('Successfully connected');
+//});
 
 // Routes
 // =============================================================
