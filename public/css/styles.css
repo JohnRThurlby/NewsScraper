@@ -1,13 +1,13 @@
 
 *{box-sizing: border-box}
 
-body {
+main {
  width: 75%;
  margin: 0 auto; 
  display: flex;
  min-height: 100vh;
  flex-direction: column;
- background-image: url(../images/news.jpg);
+ background-image: url(/images/newspaper_icon.png);
  background-size: cover;
  background-position: center;
  background-color: #231f20;

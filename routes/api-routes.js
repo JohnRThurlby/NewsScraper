@@ -59,14 +59,14 @@ app.get('/scrape', function(req, res) {
 
     // Then, load html into cheerio and save it to $ for a shorthand selector
     var $ = cheerio.load(html);
-
+    console.log(html)
     // This is an error handler for the Onion website only, they have duplicate articles for some reason...
     var headlineArray = [];
 
     // Now, grab every everything with a class of "inner" with each "article" tag
 
     $('a[class=story-link]').each(function(i, element) {
-
+        console.log(element)
         // Create an empty result object
         var result = {}
        
@@ -169,9 +169,9 @@ app.post('/add/notes/:id', function (req, res){
     if (err) {
       console.log(err);
     } 
-    // Or, relate the comment to the article
+    // Or, relate the note to the article
     else {
-      // Push the new Comment to the list of comments in the article
+      // Push the new note to the list of notes in the article
       Article.findOneAndUpdate({'_id': articleId}, {$push: {'notes':doc._id}}, {new: true})
       // execute the above query
       .exec(function(err, doc){

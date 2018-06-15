@@ -1,18 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <!-- Tab Title -->
     <title>NY Times Scraper</title>
     <!-- Favicon -->
     <link rel="icon" href="images/newspaper_icon.png">
     <!-- View Port Size -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1" name="description" content="Full stack news scraper as an example of MongoDB and Cheerio.">
     <!-- Materialize - Compiled and minified CSS -->
+    <!-- Link in jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" defer integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+
+    <!-- Materialize - Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
     <!-- Materialize - Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/html" href="css/style.css">
   </head>
 
   <body>
@@ -21,7 +26,7 @@
     <div class="navbar-fixed">
       <nav>
         <div class="nav-wrapper grey darken-3">
-          <a href="/" class="brand-logo"><i class="material-icons">loop</i>NY Times News Scraper</a>
+          <a href="/" class="brand-logo"><i class="material-icons">loop</i>NY Times Scraper</a>
           <a href="" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
           <ul class="right hide-on-med-and-down">
             <li><a href="http://www.nytimes.com/" target="_new">NY Times</a></li>
@@ -46,11 +51,11 @@
         <ul class="collection with-header">
           <li class="collection-header grey lighten-2"><h4><b>Welcome to the NY Times Scraper!</b></h4></li>
           <li class="collection-item">This application lets you read and make notes on news articles that were scrapped from the NY Times.</li>
-          <li class="collection-item"><div>Click <i class="material-icons">loop</i> in the navbar to re-scrape data.</div></li>
+        <!--  <li class="collection-item"><div>Click <i class="material-icons">loop</i> in the navbar to re-scrape data.</div></li>
           <li class="collection-item"><div>Click <i class="material-icons">language</i> to view an article.</div></li>
           <li class="collection-item"><div>Click <i class="material-icons">comment</i> to add a note.</div></li>
           <li class="collection-item"><div>Click <i class="material-icons">thumbs_up_down</i> to read notes.</div></li>
-        </ul>
+        -- ></ul>
       </div>
 
 
@@ -66,6 +71,10 @@
     <footer class="page-footer grey darken-3">
       <div class="footer-copyright">
         <div class="container">
+          <!-- <ul class="collection">
+            <li class="collection-item"><div>Click <i class="material-icons">loop</i> in the navbar to re-scrape data.</div></li>
+            <li class="collection-item"><div>Click <i class="material-icons">language</i> to view an article.</div></li>
+          </ul> -->
         © Author cannot claim copyright. All article data was web scraped from 
         <a class="grey-text text-lighten-4" href="http://www.nytimes.com/">www.nytimes.com</a>
         </div>
@@ -74,14 +83,10 @@
 
 
 
-    <!-- Link in jQuery CDN -->
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-
-    <!-- Materialize - Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+    
 
     <!-- Basic Page JavaScript for Repsonsiveness -->
-    <script type="text/javascript" src="js/view.js"></script>
+    <script type="text/javascript" src="js/view.js" defer></script>
     
   </body>
 

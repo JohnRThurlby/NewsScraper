@@ -3,8 +3,8 @@ $(document).ready(function(){
     // Nav Bar Mobile Slider
     $(".button-collapse").sideNav();
   
-      // Click Listener for FORM SUBMISSION to ADD a comment
-    $('.add-comment-button').on('click', function(){
+      // Click Listener for FORM SUBMISSION to ADD a note
+    $('.add-notes-button').on('click', function(){
   
       // Get _id of comment to be deleted
       var articleId = $(this).data("id");
