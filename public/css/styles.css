@@ -79,27 +79,7 @@ input[type=submit]:hover {
   font-size: 18px;
 }
 
-/* Add a green text color and a checkmark when the requirements are right */
-.valid {
-  color: green;
-} 
 
-.valid:before {
-  position: relative;
-  left: -35px;
-  content: "✔";
-} 
-
-/* Add a red text color and an "x" when the requirements are wrong */
-.invalid {
-  color: red;
-} 
-
-.invalid:before {
-  position: relative;
-  left: -35px;
-  content: "✖";
-}
 
 /* Responsive layout - when the screen is less than 650px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 650px) {
@@ -138,17 +118,7 @@ input[type=submit]:hover {
   background-size: cover;
 }
 
-/* Styles for the alternating / transition effect. */
 
-.toggle-image {
-   position: absolute;
-  width: 100%;
-  top: 0;
-  left: 0;
-   height: 800px;
-  transition: opacity 1s ease-in-out;
-} 
-/*main page-amani*/
 
 html, body {
   width: 100%!important;
@@ -249,11 +219,6 @@ html, body {
   position: absolute;
   right: 1.125rem; bottom: 1.125rem;
 }
-
-
-
-#toggle--login:checked ~ .form--signup { left:200%; visibility:hidden; }
-#toggle--signup:checked ~ .form--login { left:-100%; visibility:hidden; }
 
 @media (height:300px){.legal,.photo-cred{display:none}}
 

@@ -1,38 +1,109 @@
-{{!-- Landing Page --}}
+{{!-- Templating for all Articles  --}}
 
-<div class="legal">
-    <a class="text text--small text--border-right" href="javascript:;">Terms</a>
-    <a class="text text--small text--border-right" href="javascript:;">Privacy</a>
-</div>
+{{!-- Iterate Over all the articles --}}
+{{#each articles}}
+  <ul class="collapsible" data-collapsible="accordion">
 
-<div class="develop">
-    <a class="text text--small" href="https://github.com/JohnRThurlby/NewsScraper" target="_blank">Developed by
-        <b>John R. Thurlby</b>
-    </a>
-</div>
+    <!-- Article Drop Down -->
+    <li>
+      <div style="background-color: white;" class="collapsible-header grey lighten-2">
+        <i class="material-icons">language</i> <b>{{updated}}</b>
+        <div style="clear: left; line-height: 110%; padding-bottom: 10px;"><b>{{headline}}</b></div>
+        <div style="clear: left; line-height: 110%; padding-bottom: 10px;"><b>{{byLine}}</b></div>
+      </div>
+      <div class="collapsible-body" style="background-color: white;">
+        <p>
+          {{summary}}
+          <br><br>
+          <i>Please read the full article <a href="{{storyUrl}}" target="_new">here</a>.</i>
+        </p>
+        </div>
+    </li>
 
-<header>
- <nav>
-    <div class="nav-wrapper  blue lighten-4">
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li class="blue lighten-4"><a href="https://radiant-eyrie-36675.herokuapp.com/">News Headlines</a></li>
-        <li class="blue lighten-4"><a href="/">Home</a></li>
-        <li class="blue lighten-4"><a href="/api/savedArticles">Saved Articles</a></li>
-        <li class="blue lighten-4"><a href="/api/newArticles">New Articles</a></li>
-      </ul>
-    </div>
-  </nav>
-</header>
 
-<div id = "feed">
-  {{#each articles}}
-        {{> feeds/feeds}}
-  {{/each}}
-</div>
+    <!-- Add Notes Drop Down -->
+    <li>
+      <div class="collapsible-header"><i class="material-icons">notes</i>Add a Note</div>
+      <div class="collapsible-body" style="background-color: white;">
 
-{{!-- Footer Container --}}
-<footer>
-</footer>
+        <form id="form-add-{{_id}}" action="add/notes/{{_id}}" method="post" style="background-color: white;">
+
+          <!-- Author Name Input -->
+          <div class="row">
+            <div class="input-field col s2"></div>
+            <div class="input-field col s8">
+              <input id="author_name" name="name" type="text" class="validate">
+              <label for="author_name">Your Name:</label>
+            </div>
+          </div>
+          
+          <!-- Notes Input -->
+          <div class="row">
+            <div class="input-field col s2"></div>
+            <div class="input-field col s8">
+              <textarea id="notes_box" name="notes" class="materialize-textarea"></textarea>
+              <label for="Notes_box">Your Reaction:</label>
+            </div>
+          </div>
+
+            <!-- Submit Button -->
+            <div class="row">
+              <div class="input-field col s2"></div>
+              <div class="input-field col s8">
+              <center><input class="btn add-notes-button" data-id="{{_id}}" type="submit" value="Submit"></center>
+              </div>
+            </div>
+          
+        </form>
+
+      </div>
+    </li>
+
+
+    <!-- View Comments Drop Down -->
+    <li>
+      <div class="collapsible-header"><i class="material-icons">thumbs_up_down</i>View Notes</div>
+      <div class="collapsible-body" style="background-color: white;">
+      
+        {{!-- Check if the article has notes --}}
+        {{#if notes}}
+
+          {{!-- Article has notes so iterate over them  --}}
+          <ul class="collection">
+            {{#each notes}}
+            
+              <li class="collection-item">
+
+                {{!-- Add Author Name --}}
+                <b>{{author}}</b> 
+
+                {{!-- Add a Delete Button --}}
+                <span class="badge">
+                  <form id="form-delete-{{_id}}" action="remove/notes/{{_id}}" method="post">
+                    <input class="btn-small delete-notes-button" data-id="{{_id}}" type="submit" value="Delete" style="color: white; background-color: red; border-color: red;">
+                  </form>
+                </span>
+
+                <br>
+
+                {{!-- Add the Content of the Note --}}
+                {{content}}
+
+              </li> 
+            {{/each}}
+          </ul>
+        
+        {{!-- No Notes exist, so display message --}}
+        {{else}}
+          <p>No Notes Available</p>
+        {{/if}}
+            
+        
+      </div>
+    </li>
+
+  </ul>
+{{/each}}
 
 
 
