@@ -21,7 +21,16 @@
         </div>
     </li>
 
+<!-- Add Article Save Drop Down -->
+    <li>
+      <div class="collapsible-header"><i class="material-icons">save</i>Save Article</div>
+      <div class="collapsible-body" style="background-color: white;">
 
+        <form id="form-add-{{_id}}" action="save/{{_id}}" method="post" style="background-color: white;"></form>
+
+      </div>
+
+    </li>
     <!-- Add Notes Drop Down -->
     <li>
       <div class="collapsible-header"><i class="material-icons">notes</i>Add a Note</div>
@@ -61,7 +70,7 @@
     </li>
 
 
-    <!-- View Comments Drop Down -->
+    <!-- View Notes Drop Down -->
     <li>
       <div class="collapsible-header"><i class="material-icons">thumbs_up_down</i>View Notes</div>
       <div class="collapsible-body" style="background-color: white;">
