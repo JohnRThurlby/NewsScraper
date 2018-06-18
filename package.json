@@ -28,6 +28,7 @@
     "mongoose": "^5.1.5",
     "newsapi": "^2.2.2",
     "path": "^0.12.7",
+    "profanity-censor": "^1.0.5",
     "request": "^2.87.0"
   }
 }

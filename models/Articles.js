@@ -35,6 +35,8 @@ var ArticleSchema = new Schema({
 
 })
 
+ArticleSchema.index({headline: "text"});
+
 // Create the Article model with Mongoose
 var Article = mongoose.model('Article', ArticleSchema);
 

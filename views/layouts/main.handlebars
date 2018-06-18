@@ -23,41 +23,40 @@
   <body>
   
     <!-- Fixed Nav Bar -->
-    <div class="navbar-fixed">
+    <div class="navbar-fixed ">
       <nav>
         <div class="nav-wrapper grey darken-3">
-          <a href="/" class="brand-logo"><i class="material-icons">loop</i>NY Times Scraper</a>
+          <a href="/scrape" class="brand-logo"><i class="material-icons">loop</i>NY Times Scraper</a>
           <a href="" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
           <ul class="right hide-on-med-and-down">
+            <li>
+              <form action="/search" method="POST">
+                <div class="input-field">
+                  <input id="search" name="search" type="search" placeholder="Search for articles" required>
+                  <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                  <i class="material-icons">close</i>
+                </div>
+              </form>
+            </li>
             <li><a href="http://www.nytimes.com/" target="_new">NY Times</a></li>
             <li><a href="https://github.com/JohnRThurlby/NewsScraper" target="_new">Github Repo</a></li>
           </ul>
         </div>
       </nav>
     </div>
-
-    <!-- For Mobile Nav Bar -->
-    <ul class="side-nav darken-3" id="mobile-demo">
-      <li><a href="http://www.nytimes.com/" target="_new">NY Times</a></li>
-      <li><a href="https://github.com/JohnRThurlby/NewsScraper" target="_new">Github Repo</a></li>
-    </ul>
-
-
+     
     <!-- Page Content -->
     <main> 
 
       <!-- Site Info Container -->
       <div class="container">
         <ul class="collection with-header">
-          <li class="collection-header grey lighten-2"><h4><b>Welcome to the NY Times Scraper!</b></h4></li>
-          <li class="collection-item">This application lets you read and make notes on news articles that were scrapped from the NY Times.</li>
-        <!--  <li class="collection-item"><div>Click <i class="material-icons">loop</i> in the navbar to re-scrape data.</div></li>
-          <li class="collection-item"><div>Click <i class="material-icons">language</i> to view an article.</div></li>
-          <li class="collection-item"><div>Click <i class="material-icons">comment</i> to add a note.</div></li>
-          <li class="collection-item"><div>Click <i class="material-icons">thumbs_up_down</i> to read notes.</div></li>
-        -- ></ul>
+          <li class="collection-header grey lighten-2"><h4><center><b>Welcome to the NY Times Scraper!</b></center></h4></li>
+          <li class="collection-item"><center>You can read and make notes on news articles that were scraped from the NY Times.</center></li>
+          <li class="collection-item"><center><a href="/scrape" class="brand-logo"><i class="material-icons">loop</i>Hit to scrape new articles</a></center></li>
+        
+        </ul>
       </div>
-
 
       <!-- Render All Articles -->
       <div class="container">
@@ -71,12 +70,8 @@
     <footer class="page-footer grey darken-3">
       <div class="footer-copyright">
         <div class="container">
-          <!-- <ul class="collection">
-            <li class="collection-item"><div>Click <i class="material-icons">loop</i> in the navbar to re-scrape data.</div></li>
-            <li class="collection-item"><div>Click <i class="material-icons">language</i> to view an article.</div></li>
-          </ul> -->
-        © Author cannot claim copyright. All article data was web scraped from 
-        <a class="grey-text text-lighten-4" href="http://www.nytimes.com/">www.nytimes.com</a>
+          © Author cannot claim copyright. All article data was web scraped from 
+          <a class="grey-text text-lighten-4" href="http://www.nytimes.com/">www.nytimes.com</a>
         </div>
       </div>
     </footer>
@@ -86,7 +81,7 @@
     
 
     <!-- Basic Page JavaScript for Repsonsiveness -->
-    <script type="text/javascript" src="js/view.js" defer></script>
+    <script type="text/javascript" src="js/view.js" defer></script> 
     
   </body>
 

@@ -7,7 +7,7 @@ main {
  display: flex;
  min-height: 100vh;
  flex-direction: column;
- background-image: url(/images/newspaper_icon.png);
+ background-image: url(/images/nytimes.png);
  background-size: cover;
  background-position: center;
  background-color: #231f20;
@@ -59,6 +59,16 @@ input[type=submit] {
 input[type=submit]:hover {
   background-color: #45a049;
 } 
+
+.save-article-button {
+  width:120px;
+  height:60px;
+  margin-left:35px;
+  display:block;
+  color:white;
+  border: none;
+  outline:none;
+}
 
 .hide-md-lg {
   display: none;

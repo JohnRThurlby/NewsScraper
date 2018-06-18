@@ -8,29 +8,25 @@
     <li>
       <div style="background-color: white;" class="collapsible-header grey lighten-2">
         <i class="material-icons">language</i> <b>{{updated}}</b>
-        <div style="clear: left; line-height: 110%; padding-bottom: 10px;"><b>{{headline}}</b></div>
-        <div style="clear: left; line-height: 110%; padding-bottom: 10px;"><b>{{byLine}}</b></div>
-        <div style="clear: left; line-height: 110%; padding-bottom: 10px;"><img src="{{imgUrl}}" alt="#" ></div>
+        <center><div style="clear: left; line-height: 110%; padding-bottom: 10px;"><b> {{headline}}   {{byLine}}</b></div></center>
+        <!-- div style="clear: left; line-height: 110%; padding-bottom: 10px;"><b>{{byLine}}</b></div-->
+        <center><div style="clear: center; line-height: 110%; padding-bottom: 10px;"><img src="{{imgUrl}}" alt="#" width="150" height="150"></div></center>
       </div>
       <div class="collapsible-body" style="background-color: white;">
         <p>
           {{summary}}
           <br><br>
           <i>Please read the full article <a href="{{storyUrl}}" target="_new">here</a>.</i>
+          <span class="badge">
+            <form id="form-save-{{_id}}" action="save/{{_id}}" method="post">
+              <center><input name="save" class="btn center save-article-button" data-id="{{_id}}" type="submit" value="Save Article"></center>
+            </form>
+          </span>
         </p>
-        </div>
+        
     </li>
 
-<!-- Add Article Save Drop Down -->
-    <li>
-      <div class="collapsible-header"><i class="material-icons">save</i>Save Article</div>
-      <div class="collapsible-body" style="background-color: white;">
-
-        <form id="form-add-{{_id}}" action="save/{{_id}}" method="post" style="background-color: white;"></form>
-
-      </div>
-
-    </li>
+    
     <!-- Add Notes Drop Down -->
     <li>
       <div class="collapsible-header"><i class="material-icons">notes</i>Add a Note</div>
@@ -52,7 +48,7 @@
             <div class="input-field col s2"></div>
             <div class="input-field col s8">
               <textarea id="notes_box" name="notes" class="materialize-textarea"></textarea>
-              <label for="Notes_box">Your Reaction:</label>
+              <label for="Notes_box">Leave you comment:</label>
             </div>
           </div>
 
@@ -111,10 +107,5 @@
         
       </div>
     </li>
-
   </ul>
 {{/each}}
-
-
-
-
