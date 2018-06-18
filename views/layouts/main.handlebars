@@ -23,27 +23,56 @@
   <body>
   
     <!-- Fixed Nav Bar -->
+    <nav>
     <div class="navbar-fixed ">
+      <div class="nav-wrapper">
+        <a href="http://www.nytimes.com/" target="_blank" class="brand-logo"><i class="material-icons">cloud</i>NY Times</a>
+        <ul class="right hide-on-med-and-down">
+          <li>
+            <form action="/search" method="POST">
+              <div class="input-field">
+                <input id="search" name="search" type="search" width="30" placeholder="Search Article Headlines" required>
+                <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                <i class="material-icons">close</i>
+              </div>
+            </form>
+          </li>
+          <li><a href="/scrape"><i class="material-icons">loop</i></a></li>
+          <li><a href="/savedArticle"><i class="material-icons">refresh</i></a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+    <!-- div class="navbar-fixed ">
       <nav>
         <div class="nav-wrapper grey darken-3">
-          <a href="/scrape" class="brand-logo"><i class="material-icons">loop</i>NY Times Scraper</a>
           <a href="" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-          <ul class="right hide-on-med-and-down">
-            <li>
-              <form action="/search" method="POST">
-                <div class="input-field">
-                  <input id="search" name="search" type="search" placeholder="Search for articles" required>
-                  <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-                  <i class="material-icons">close</i>
-                </div>
-              </form>
-            </li>
-            <li><a href="http://www.nytimes.com/" target="_new">NY Times</a></li>
-            <li><a href="https://github.com/JohnRThurlby/NewsScraper" target="_new">Github Repo</a></li>
-          </ul>
+          <div class="row">
+            <div class="input-field col s2">
+                    <a href="/scrape" class="left brand-logo"><i class="material-icons">loop</i>New Scrape</a>
+            </div>
+            <div class="input-field col s2">        
+                    <a href="/savedArticle" class=" left brand-logo"><i class="material-icons">save</i>Saved Articles</a>
+            </div>
+            <div class="input-field col s6">         
+                    <ul class="hide-on-med-and-down">
+                      <li>
+                        <form action="/search" method="POST">
+                          <div class="input-field">
+                            <input id="search" name="search" type="search" placeholder="Search for articles" required>
+                            <label class="label-icon right brand-logo" for="search"><i class="material-icons">search</i></label>
+                            <i class="material-icons">close</i>
+                          </div>
+                        </form>
+                      </li>
+                      <li><a class="right brand-logo" href="http://www.nytimes.com/" target="_blank">NY Times</a></li>
+                      <li><a class="brand-logo" href="https://github.com/JohnRThurlby/NewsScraper" target="_blank">Github Repo</a></li>
+                    </ul>
+            </div>
+          </div>
         </div>
       </nav>
-    </div>
+    </div -->
      
     <!-- Page Content -->
     <main> 
@@ -65,20 +94,15 @@
 
     </main>
 
-
     <!-- Footer -->
-    <footer class="page-footer grey darken-3">
+    <footer class="page-footer footer-fixed grey darken-3">
       <div class="footer-copyright">
-        <div class="container">
+        <div class="container center">
           © Author cannot claim copyright. All article data was web scraped from 
           <a class="grey-text text-lighten-4" href="http://www.nytimes.com/">www.nytimes.com</a>
         </div>
       </div>
     </footer>
-
-
-
-    
 
     <!-- Basic Page JavaScript for Repsonsiveness -->
     <script type="text/javascript" src="js/view.js" defer></script> 

@@ -54,6 +54,31 @@ app.get('/articles', function (req, res){
 
 });
 
+// Saved Articles Page Render
+app.get('/savedArticle', function (req, res){
+
+  // Query MongoDB for all saved article entries (sort newest to top, assuming Ids increment)
+  Article.find({saved: true}).sort({_id: -1})
+
+    // But also populate all of the comments associated with the articles.
+    .populate('notes')
+
+    // Then, send them to the handlebars template to be rendered
+    .exec(function(err, doc){
+      // log any errors
+      if (err){
+        console.log(err);
+      } 
+      // or send the doc to the browser as a json object
+      else {
+        var hbsObject = {articles: doc}
+        res.render('index', hbsObject);
+        // res.json(hbsObject)
+      }
+    });
+
+});
+
 
 // Web Scrape Route
 app.get('/scrape', function(req, res) {
@@ -84,9 +109,7 @@ app.get('/scrape', function(req, res) {
         if (typeof result.imgUrl == "undefined") {
           result.imgUrl = "images/noimage2.png"
         }
-        console.log(result.imgUrl)
-
-        
+                
         // Error handling to ensure there are no empty scrapes
         if(result.headline !== "") {
 
