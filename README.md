@@ -11,7 +11,7 @@ Short video showing capabilities:
 
 Web Site Scraped: 
 
-<a href="https://www.nytimes.com/"><img src="/nytimes.png" width="256" height="256" title="NY Times"></a>
+<a href="https://www.nytimes.com/"><img src="/nytimes.png" width="356" height="256" title="NY Times"></a>
 
 Software used: 
 
@@ -19,6 +19,6 @@ Software used:
 <img src="/express.png" width="256" height="256" title="Express"><img src="/mongodb.jpg" width="256" height="256" title="MongoDB">
 <img src="/mongoose.png" width="256" height="256" title="Mongoose"><img src="/handlebars.png" width="256" height="256" title="HandleBars">
 <img src="/heroku.png" width="256" height="256" title="Heroku"><img src="/cheerio.png" width="256" height="256" title="Cheerio">
-<img src="/request.jpg" width="256" height="256" title="Request"><img src="/censored.jpg" width="256" height="256" title="Profanity=-Censor">
+<img src="/request.jpg" width="256" height="256" title="Request"><img src="/censored.jpg" width="256" height="256" title="Profanity-Censor">
 
 
