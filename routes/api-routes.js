@@ -257,6 +257,24 @@ app.post('/save/:id', function (req, res){
   });
 });
 
+// Set an  article to unsaved
+app.post('/unsave/:id', function (req, res){
+
+  // Update the article from false to true
+  Article.findByIdAndUpdate(req.params.id, {$set: {saved: false}}, {new: true}, function(err, doc) {   
+    
+    if (err) {
+      console.log(err);
+    } 
+    else {
+      
+      // Send Success Header
+      res.redirect("/articles");
+    }
+  });
+});
+
+// Search for articles
 app.post("/search", function(req, res) {
 	console.log(req.body.search);
 	Article.find({$text: {$search: req.body.search, $caseSensitive: false}}, null, {sort: {created: -1}}, function(err, doc) {

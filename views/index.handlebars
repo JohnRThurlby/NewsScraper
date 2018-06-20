@@ -16,12 +16,38 @@
         <p>
           {{summary}}
           <br><br>
-          <i>Please read the full article <a href="{{storyUrl}}" target="_new">here</a>.</i>
-          <span class="badge">
-            <form id="form-save-{{_id}}" action="save/{{_id}}" method="post">
-              <center><input name="save" class="btn center save-article-button" data-id="{{_id}}" type="submit" value="Save Article"></center>
-            </form>
-          </span>
+          <i>Please read the full article <a href="{{storyUrl}}" target="_blank">here.</a></i>
+         
+          {{#unless this.saved}} <!-- format only unsaved ones, boolean false -->
+            <span class="badge">
+              <form id="form-save-{{_id}}" action="save/{{_id}}" method="post">
+                <center><input name="save" class="btn center save-article-button" data-id="{{_id}}" type="submit" value="Save Article"></center>
+              </form>
+            </span>
+          {{/unless}} <!-- end unless -->
+          
+            
+          {{#if this.saved}} <!-- format only saved ones, boolean true -->
+            <div class="row">
+              <div class="input-field col s2"></div>
+              <div class="input-field col s3">
+                <span class="badge">
+                <form id="form-save-{{_id}}" action="save/{{_id}}" method="post">
+                  <center><input name="save" class="btn center save-article-button" data-id="{{_id}}" type="submit" value="Save Article"></center>
+                </form>
+                </span>
+              </div>
+              <div class="input-field col s1"></div>
+              <div class="input-field col s3">
+                <span class="badge">
+                  <form id="form-unsave-{{_id}}" action="unsave/{{_id}}" method="post">
+                    <center><input name="unsave" class="btn center unsave-article-button" data-id="{{_id}}" type="submit" value="UnSave Article"></center>
+                  </form>
+                </span>
+              </div>
+            </div>
+          {{/if}} <!-- end if -->
+         
         </p>
         
     </li>
