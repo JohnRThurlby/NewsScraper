@@ -269,7 +269,7 @@ app.post('/unsave/:id', function (req, res){
     else {
       
       // Send Success Header
-      res.redirect("/articles");
+      res.redirect("/savedArticle");
     }
   });
 });
@@ -280,7 +280,9 @@ app.post("/search", function(req, res) {
 	Article.find({$text: {$search: req.body.search, $caseSensitive: false}}, null, {sort: {created: -1}}, function(err, doc) {
 		console.log(doc);
 		if (doc.length === 0) {
-			res.render("placeholder", {message: "Nothing has been found. Please try other keywords."});
+      //$('input[type="text"]').val('Nothing has been found. Please try other keywords.').html()
+      res.render('index')
+      //res.render("placeholder", {message: "Nothing has been found. Please try other keywords."});
 		}
 		else {
       var hbsObject = {articles: doc}

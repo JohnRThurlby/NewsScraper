@@ -25,7 +25,7 @@ body {
   font-size: 20px;
 }
 
-#myBtn {
+#topBtn {
   display: none;
   position: fixed;
   bottom: 20px;
@@ -34,14 +34,14 @@ body {
   font-size: 18px;
   border: none;
   outline: none;
-  background-color: red;
+  background-color:lightgrey;
   color: white;
   cursor: pointer;
   padding: 15px;
   border-radius: 4px;
 }
 
-#myBtn:hover {
+#topBtn:hover {
   background-color: #555;
 }
 </style>
@@ -131,7 +131,7 @@ body {
       </div>
     </footer>
 
-<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+<button onclick="topFunction()" id="topBtn" title="Go to top">Top</button>
 
 <script>
 // When the user scrolls down 20px from the top of the document, show the button
@@ -139,9 +139,9 @@ window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        document.getElementById("myBtn").style.display = "block";
+        document.getElementById("topBtn").style.display = "block";
     } else {
-        document.getElementById("myBtn").style.display = "none";
+        document.getElementById("topBtn").style.display = "none";
     }
 }
 
